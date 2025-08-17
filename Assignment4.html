@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Replace Spaces with Hyphens</title>
+</head>
+<body>
+    <h2>Replace Spaces with Hyphens</h2>
+
+    <label>Enter a string: </label>
+    <input type="text" id="inputString">
+    <button onclick="replaceSpaces()">Replace</button>
+
+    <p id="result"></p>
+
+    <script>
+        function replaceSpaces() {
+            let str = document.getElementById("inputString").value;
+            let replacedStr = str.replace(/ /g, "-");
+            document.getElementById("result").innerText = "Result: " + replacedStr;
+        }
+    </script>
+</body>
+</html>

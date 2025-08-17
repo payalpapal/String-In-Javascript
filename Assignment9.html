@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Non-Alphanumeric Characters</title>
+</head>
+<body>
+    <h2>Remove Non-Alphanumeric Characters</h2>
+
+    <label>Enter a string: </label>
+    <input type="text" id="inputString">
+    <button onclick="cleanString()">Clean</button>
+
+    <p id="result"></p>
+
+    <script>
+        function cleanString() {
+            let str = document.getElementById("inputString").value;
+            let cleaned = str.replace(/[^a-zA-Z0-9]/g, "");
+
+            document.getElementById("result").innerText = cleaned;
+        }
+    </script>
+</body>
+</html>

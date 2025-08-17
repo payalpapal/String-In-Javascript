@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Split String into Words</title>
+</head>
+<body>
+  <h2>Split String into Words</h2>
+
+  <label>Enter a sentence:</label><br>
+  <input type="text" id="sentence" placeholder="Type here..."><br><br>
+
+  <button onclick="splitWords()">Split into Words</button>
+
+  <p id="result"></p>
+
+  <script>
+    function splitWords() {
+      let sentence = document.getElementById("sentence").value;
+
+      let wordsArray = sentence.trim().split(/\s+/);
+
+      document.getElementById("result").innerHTML = 
+        "Array of words: " + JSON.stringify(wordsArray);
+    }
+  </script>
+</body>
+</html>

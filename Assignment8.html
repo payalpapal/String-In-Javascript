@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Character Occurrence</title>
+</head>
+<body>
+    <h2>Count Occurrence of a Specific Character</h2>
+
+    <label>Enter a string: </label>
+    <input type="text" id="inputString"><br><br>
+
+    <label>Enter the character to count: </label>
+    <input type="text" id="char" maxlength="1"><br><br>
+
+    <button onclick="countCharacter()">Count</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countCharacter() {
+            let str = document.getElementById("inputString").value;
+            let char = document.getElementById("char").value;
+
+            if (char.length !== 1) {
+                document.getElementById("result").innerText = "Please enter exactly one character.";
+                return;
+            }
+
+            let count = 0;
+
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === char) {
+                    count++;
+                }
+            }
+
+            document.getElementById("result").innerText = 
+                `The character "${char}" appears ${count} times.`;
+        }
+    </script>
+</body>
+</html>
